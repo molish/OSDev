@@ -54,7 +54,7 @@ namespace OSDev.Controllers
             switch (commandName)
             {
                 case "help" :
-                    executeHelp();
+                    executeHelp(output);
                     break;
                 case "clear":
                     executeClear(output);
@@ -98,9 +98,42 @@ namespace OSDev.Controllers
             }
         }
 
-        private void executeHelp()
+        private void executeHelp(RichTextBox output)
         {
-            
+            output.AppendText("\n\n" +
+                "Все команды вводятся в нижнем регистре, с пробелами между аргументами, " +
+                "аргументы вводятся без кавычек\n\n" +
+                "Адреса папок и файлов вводятся относительно той папки в которой " +
+                "вы находитесь в данный момент\n\n" +
+                "Командв clear - очищает поле вывода результатов выполнения команд\n\n" +
+                "Команда adduser - добавляет нового пользователя системы, " +
+                "выполняется только от имени пользователя назначенного администратором\n" +
+                "Пример: adduser \"username\" \"userpassword\" \"role\"\nгде параметр role " +
+                "может принимать одно из двух значений user(в случае если новый пользователь" +
+                " будет являться обычным пользователем) или admin(в случае если новому " +
+                "пользователю присваивается роль администратора)\n\n" +
+                "Команда rmuser - удаляет существующего пользователя, " +
+                "выполняется только от имени пользователя назначенного администратором\n" +
+                "Пример: rmuser \"username\" \n\n" +
+                "Команда cd - переходит в указанный каталог\n" +
+                "Пример cd \"path\"\n\n" +
+                "Команда rmdir - удаляет директорию\n" +
+                "Пример: rmdir \"path\"\n\n" +
+                "Команда renamedir - переименовывает директорию\n" +
+                "Пример: renamedir \"oldpathname\" \"newpathname\"\n\n" +
+                "Команда mkdir - создает директорию\n" +
+                "Пример: mkdir \"path\"\n\n" +
+                "Команда rmfile - удаляет файл\n" +
+                "Пример: rmfile \"path\"\n\n" +
+                "Команда mkfile - создает файл\n" +
+                "Пример: mkfile \"path\"\n\n" +
+                "Команда openfile - выводит содержимое файла в консоль\n" +
+                "Пример: openfile \"path\"\n\n" +
+                "Команда renamefile - переименовывает файл\n" +
+                "Пример: renamefile \"oldfilename\" \"newfilename\"\n" +
+                "Команда writetofile - записывает текст в файл\n" +
+                "Пример: writetofile \"path\" \"text\"\n" +
+                "");
         }
 
         private void executeClear(RichTextBox output)

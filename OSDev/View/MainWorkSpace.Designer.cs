@@ -65,7 +65,7 @@
             this.richTextBoxCommandResult.ReadOnly = true;
             this.richTextBoxCommandResult.Size = new System.Drawing.Size(934, 117);
             this.richTextBoxCommandResult.TabIndex = 1;
-            this.richTextBoxCommandResult.Text = "";
+            this.richTextBoxCommandResult.Text = "Введите команду help для просмотра сведений о доступных командах...";
             // 
             // listBoxDirectoryContent
             // 
