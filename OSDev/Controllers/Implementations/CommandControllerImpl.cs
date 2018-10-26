@@ -132,8 +132,7 @@ namespace OSDev.Controllers
                 "Команда renamefile - переименовывает файл\n" +
                 "Пример: renamefile \"oldfilename\" \"newfilename\"\n" +
                 "Команда writetofile - записывает текст в файл\n" +
-                "Пример: writetofile \"path\" \"text\"\n" +
-                "");
+                "Пример: writetofile \"path\" \"text\"\n");
         }
 
         private void executeClear(RichTextBox output)
