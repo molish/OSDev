@@ -34,7 +34,7 @@ namespace OSDev.Controllers.Implementations
                 throw new FileOrDirectoryOlreadyExistException();
             if (!SecurityManagerImpl.getInstance().isFileNameCorrect(name))
                 throw new WrongFileOrDirectoryNameException();
-            File.Create(dataProvider.getCurrentDirectory() + '\\' + name);
+            File.Create(dataProvider.getCurrentDirectory() + '\\' + name).Close();
         }
 
         public void deleteFile(string name)
