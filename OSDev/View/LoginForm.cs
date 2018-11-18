@@ -91,7 +91,7 @@ namespace OSDev
             }
             if (!File.Exists("root\\SYSTEM\\users\\users.txt"))
             {
-                File.Create("root\\SYSTEM\\users\\users.txt");
+                File.Create("root\\SYSTEM\\users\\users.txt").Close();
                 using (StreamWriter sw = new StreamWriter("root\\SYSTEM\\users\\users.txt"))
                 {
                     sw.WriteLine("admin:admin:admin");
